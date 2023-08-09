@@ -38,6 +38,11 @@ app.get('/name', (req, res) => {
     res.json({ "name": `${first} ${last}` });
 })
 
+app.post('/name', (req, res) => {
+    const { first, last } = req.query;
+    res.json({ "name": `${first} ${last}` });
+})
+
 
 
 
