@@ -21,7 +21,12 @@ app.get('/json', midd, (req, res) => {
     }
     return res.json({ "message": "Hello json" });
 })
-
+app.get('/now', (req, res, next) => {
+    req.time = new Date().toString();
+    next();
+}, (req, res) => {
+    return res.json({ "message": req.time });
+})
 
 
 
