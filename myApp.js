@@ -5,6 +5,9 @@ console.log('Hello world');
 app.get('/', (req, res) => {
     const path = __dirname + '/views/index.html';
     res.sendFile(path);
+});
+app.get('/json', (req, res) => {
+    res.json({ "message": "Hello json" });
 })
 
 
