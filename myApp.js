@@ -14,7 +14,14 @@ app.get('/json', (req, res) => {
     return res.json({ "message": "Hello json" });
 })
 
-
+const midd = function (req, res, next) {
+    console.log("I'm a middleware...");
+    const method = req.method;
+    const path = req.url;
+    const ip = req.ip;
+    console.log(method, path + ' - ' + ip)
+    next();
+}
 
 
 
