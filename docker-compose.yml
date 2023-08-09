@@ -1,0 +1,12 @@
+version: '3.4'
+
+services:
+  codecamp:
+    image: codecamp
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    environment:
+      NODE_ENV: production
+    ports:
+      - 3112:3112
