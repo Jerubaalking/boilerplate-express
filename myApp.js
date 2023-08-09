@@ -3,7 +3,7 @@ let bodyParser = require('body-parser');
 let app = express();
 require('dotenv').config();
 app.use('/public', express.static(__dirname + '/public'));
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({ extended: true }));
 console.log('Hello world');
 const midd = function (req, res, next) {
     console.log("I'm a middleware...");
